@@ -1,0 +1,142 @@
+body {
+  min-height: 100vh;
+  background: linear-gradient(#373f5a, #616967);
+  color: #3c4047;
+  font-size: 1em;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+h2 {
+  font-size: 2em;
+  font-weight: 700;
+  margin: 1rem 0 0;
+  text-transform: uppercase;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #3c4047;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #000000;
+}
+
+#container {
+  width: 60%;
+  margin: 0 auto;
+  padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+header #header__nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+
+main {
+  margin: 5em auto;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.main__section {
+  background-color: #ffffff;
+  box-shadow: 0 0 1em rgba(0, 0, 0, 0.3);
+  font-weight: 400;
+  text-align: left;
+  display: flex;
+}
+
+.picture {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.picture > .character__picture {
+  min-width: 320px;
+  height: 320px;
+}
+
+article {
+  width: 50%;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.stars__section {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.stars {
+  max-height: 20px;
+  max-width: 20px;
+}
+
+.character__section {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 1rem;
+}
+
+.button {
+  background-color: #f6f6f4;
+  color: #3c4047;
+  border-radius: 0.3em;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 0.5em 1em;
+}
+
+.button:hover {
+  background-color: #25315e;
+  color: #ffffff;
+}
+
+footer {
+  border-top: 1px solid #3c4047;
+  padding-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer p {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+footer nav {
+  display: flex;
+  gap: 2em;
+  list-style-type: none;
+}
+
+footer > nav > a {
+  color: #ffffff;
+}
