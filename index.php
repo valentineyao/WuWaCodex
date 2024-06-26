@@ -40,7 +40,6 @@ $router->map(
   'character-read'
 );
 
-
 $router->map(
   'GET',
   '/weapons',
@@ -49,6 +48,16 @@ $router->map(
     'controller' => '\App\Controllers\WeaponController'
   ],
   'weapon-list'
+);
+
+$router->map(
+  'GET',
+  '/weapons/[a:name]',
+  [
+    'method' => 'read',
+    'controller' => '\App\Controllers\WeaponController'
+  ],
+  'weapon-read'
 );
 
 $match = $router->match();

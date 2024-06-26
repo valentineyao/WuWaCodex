@@ -1,4 +1,3 @@
-<?php d($viewData['characters']) ?>
 <?php if (!empty($viewData['characters'])) : ?>
   <main>
     <ul class="list">
