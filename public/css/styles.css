@@ -60,7 +60,7 @@ header > #header__nav {
 }
 
 .button {
-  background-color: #f6f6f4;
+  background-color: #ffffff;
   color: #3c4047;
   border-radius: 0.2rem;
   font-weight: 600;
@@ -101,6 +101,7 @@ footer > nav > a {
 
 main {
   min-width: 100%;
+  color: #ffffff;
   margin: 3em auto;
   display: flex;
   flex: 1;
@@ -108,10 +109,19 @@ main {
   gap: 3rem;
 }
 
+.main__presentation {
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  line-height: 1.3;
+}
+
 .main__section {
   background-color: #ffffff;
   box-shadow: 0 0 1em rgba(0, 0, 0, 0.3);
   border-radius: 0.2rem;
+  color: #3c4047;
   text-align: left;
   padding: 1rem;
   display: flex;
@@ -135,6 +145,12 @@ article {
   flex-direction: column;
   line-height: 1.3;
   padding: 0 1rem;
+}
+
+h1 {
+  font-size: 1.5em;
+  font-weight: 600;
+  margin-top: 1rem;
 }
 
 h2 {
@@ -229,6 +245,11 @@ p {
   width: 50px;
   height: 50px;
   margin: 0 auto 0.5rem;
+}
+
+.logo {
+  width: 65%;
+  margin: 0 auto;
 }
 
 @media (max-width: 380px) {
@@ -364,6 +385,7 @@ p {
   .list-weapon {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    color: #3c4047;
   }
 
   .list-item {
