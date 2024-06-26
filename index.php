@@ -20,6 +20,16 @@ $router->map(
   'main-home'
 );
 
+$router->map(
+  'GET',
+  '/characters',
+  [
+    'method' => 'list',
+    'controller' => '\App\Controllers\CharacterController'
+  ],
+  'character-list'
+);
+
 $match = $router->match();
 
 $dispatcher = new Dispatcher($match, '\App\Controllers\ErrorController::error404');
