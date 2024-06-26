@@ -30,6 +30,16 @@ $router->map(
   'character-list'
 );
 
+$router->map(
+  'GET',
+  '/characters/[a:name]',
+  [
+    'method' => 'read',
+    'controller' => '\App\Controllers\CharacterController'
+  ],
+  'character-read'
+);
+
 $match = $router->match();
 
 $dispatcher = new Dispatcher($match, '\App\Controllers\ErrorController::error404');

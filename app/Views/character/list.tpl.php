@@ -2,7 +2,7 @@
   <?php if (!empty($viewData['characters'])) : ?>
     <ul class="character__list">
       <?php foreach ($viewData['characters'] as $character) : ?>
-        <a href="#">
+        <a href="<?= $router->generate('character-read', ['name' => strtolower($character)]) ?>">
           <li class="character__list-item">
             <img src="<?= $absoluteUrl ?>/images/image.png" alt="WuWa logo" />
             <?= htmlspecialchars($character); ?>

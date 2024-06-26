@@ -2,8 +2,17 @@
 
 namespace App\Controllers;
 
+use App\Models\CharacterModel;
+
 class CharacterController extends CoreController
 {
+  protected $characterModel;
+
+  public function __construct()
+  {
+    $this->characterModel = new CharacterModel();
+  }
+
   /**
    * Method which handles the home page
    *
@@ -13,7 +22,13 @@ class CharacterController extends CoreController
   {
     // 1. préparation des données
     $apiUrl = 'https://api.resonance.rest/characters';
-    $characterData = $this->fetchCharacters($apiUrl);
+    $characterData = $this->characterModel->fetchCharacters($apiUrl);
+
+    if ($characterData === false) {
+      header('HTTP/1.0 404 Not Found');
+      $this->show('error/error404');
+      return;
+    }
 
     sort($characterData);
 
@@ -25,21 +40,27 @@ class CharacterController extends CoreController
   }
 
   /**
-   * Récupère les personnages du jeu de l'API
+   * Méthode pour afficher les détails d'un personnage
    *
-   * @param string $url
-   * @return array
+   * @param string $name 
+   * @return void
    */
-  private function fetchCharacters($url)
+  public function read($name)
   {
-    $response = file_get_contents($url);
+    // 1. préparation des données
+    $apiUrl = 'https://api.resonance.rest/characters/' . urlencode($name);
+    $characterData = $this->characterModel->fetchCharacter($apiUrl);
 
-    if ($response === FALSE) {
-      die('Error retrieving data.');
+    if ($characterData === false) {
+      header('HTTP/1.0 404 Not Found');
+      $this->show('error/error404');
+      return;
     }
 
-    $data = json_decode($response, true);
-
-    return $data['characters'];
+    // 2. appel de la vue
+    $this->show(
+      'character/read',
+      ['character' => $characterData]
+    );
   }
 }
