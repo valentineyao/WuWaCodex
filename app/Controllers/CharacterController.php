@@ -14,7 +14,7 @@ class CharacterController extends CoreController
   }
 
   /**
-   * Method which handles the home page
+   * Méthode pour afficher la liste des personnages
    *
    * @return void
    */

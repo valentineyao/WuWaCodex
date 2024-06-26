@@ -17,6 +17,6 @@
       <nav id="header__nav">
         <a class="button" href="<?= $router->generate('main-home') ?>">Home</a>
         <a class="button" href="<?= $router->generate('character-list') ?>">Characters</a>
-        <a class="button" href="#">Weapons</a>
+        <a class="button" href="<?= $router->generate('weapon-list') ?>">Weapons</a>
       </nav>
     </header>

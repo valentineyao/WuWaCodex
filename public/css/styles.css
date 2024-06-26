@@ -36,6 +36,7 @@ body {
 a {
   color: #3c4047;
   text-decoration: none;
+  transition: 0.2s;
 }
 
 a:hover {
@@ -193,7 +194,7 @@ p {
   text-transform: inherit;
 }
 
-.character__list {
+.list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
@@ -202,13 +203,13 @@ p {
   margin: 0;
 }
 
-.character__list > a:hover > .character__list-item {
+.list > a:hover > .list-item {
   background-color: #373f5a;
   border: 1px solid #ffffff;
   color: #ffffff;
 }
 
-.character__list-item {
+.list-item {
   background-color: #ffffff;
   border: 1px solid #ffffff;
   border-radius: 0.2rem;
@@ -221,7 +222,7 @@ p {
   transition: 0.2s;
 }
 
-.character__list > a > .character__list-item > img {
+.list > a > .list-item > img {
   width: 50px;
   height: 50px;
   margin: 0 auto 0.5rem;
@@ -258,7 +259,7 @@ p {
     width: 60%;
   }
 
-  .character__list {
+  .list {
     grid-template-columns: repeat(4, 1fr);
   }
 }
@@ -301,15 +302,15 @@ p {
     width: 100%;
   }
 
-  .character__list {
+  .list {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .character__list-item {
+  .list-item {
     flex-direction: row;
   }
 
-  .character__list > a > .character__list-item > img {
+  .list > a > .list-item > img {
     width: 40px;
     height: 40px;
     margin: 0 0.5rem 0 0;
@@ -353,15 +354,15 @@ p {
     flex-direction: row;
   }
 
-  .character__list {
+  .list {
     grid-template-columns: repeat(4, 1fr);
   }
 
-  .character__list-item {
+  .list-item {
     flex-direction: row;
   }
 
-  .character__list > a > .character__list-item > img {
+  .list > a > .list-item > img {
     width: 50px;
     height: 50px;
     margin: 0 0.5rem 0 0;

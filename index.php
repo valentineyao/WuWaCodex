@@ -40,6 +40,17 @@ $router->map(
   'character-read'
 );
 
+
+$router->map(
+  'GET',
+  '/weapons',
+  [
+    'method' => 'list',
+    'controller' => '\App\Controllers\WeaponController'
+  ],
+  'weapon-list'
+);
+
 $match = $router->match();
 
 $dispatcher = new Dispatcher($match, '\App\Controllers\ErrorController::error404');
